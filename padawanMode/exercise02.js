@@ -1,38 +1,37 @@
-//1- Programa una funcion que cuente la cantidad de caracteres en una cadena de texto
-//2- Programa una funcion que te devuelva el texto recortado según el número de caracteres indicados
-//3- Programa una funcion que dada una string te devuelva un array de textos separados por cierto caracter, por ejemplo --> miFuncion("hola que tal", " ") devolverá ["hola","que ", "tal"]
+//1- Make a function that counts the number of characters in a text
+//2- Make a function that returns the text trimmed according to the number of characteres indicated
+//3- Make a function that, given a string, returns an array of texts separated by a certain character, for example --> miFunction("Hello how are you", " ")will return ["Hello","how","are","you"]
 
-
-//Contar la cantidad de caracteres en una cadena de texto:
-function contarCaracteres(cadena) {
-    if (typeof cadena === 'string') {
-      return cadena.length;
+//Count the number of characters in a text string:
+function countCharacters(string) {
+    if (typeof string === 'string') {
+      return string.length;
     } else {
-      return 'Por favor, ingresa una cadena de texto válida.';
+      return 'please enter a string valid'
     }
   }
   
-  console.log(contarCaracteres("Hola, mundo")); // output: 11
+  console.log(countCharacters("Hello there!"))
 
-//Devolver el texto recortado según el número de caracteres indicados:
-function recortarTexto(cadena, longitud) {
-    if (typeof cadena === 'string' && typeof longitud === 'number' && longitud > 0) {
-      return cadena.slice(0, longitud);
+//Return the text trimmed according to the number of characters indicated:
+function cutText(string, long) {
+    if (typeof string === 'string' && typeof long === 'number' && long > 0) {
+      return string.slice(0, long);
     } else {
-      return 'Por favor, ingresa una cadena de texto válida y una longitud positiva.';
+      return 'Please enter a string valid';
     }
   }
   
-  console.log(recortarTexto("Esta es una cadena larga", 8)); // output: "Esta es"
+  console.log(cutText("This is a long string", 8)); // output: "Esta es"
   
-  //Devolver un array de textos separados por cierto caracter:
-  function separarTextoPorCaracter(cadena, separador) {
-    if (typeof cadena === 'string' && typeof separador === 'string') {
-      return cadena.split(separador);
+  //Return an array of texts separated by a certain character:
+  function separateTextByCharacter(string, separator) {
+    if (typeof string === 'string' && typeof separator === 'string') {
+      return string.split(separator);
     } else {
-      return 'Por favor, ingresa una cadena de texto y un caracter separador válidos.';
+      return 'Please enter a string and a separator valid.';
     }
   }
   
-  console.log(separarTextoPorCaracter("Hola que tal", " ")); // output: ["Hola", "que", "tal"]
+  console.log(separateTextByCharacter("Hello there!", " ")); // output: ["Hola", "que", "tal"]
   
