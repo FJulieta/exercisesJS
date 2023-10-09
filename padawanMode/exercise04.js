@@ -1,5 +1,10 @@
 //Create a function that reads two words and determines whether they are anagrams of each other.
 
+//REMEMBER:
+/* si tienen distinta longitud no son anagramas
+ * si son cadenas vacias no son anagramas
+ * si son iguales no son anagramas */
+
 function isAnagram(word1, word2) {
     // Eliminar espacios en blanco y convertir las palabras a minúsculas
     word1 = word1.replace(/\s/g, "").toLowerCase();
