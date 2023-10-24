@@ -1,15 +1,6 @@
-//1- Create an object with a <hello> method that writes "Hello <name> " in the console
-//2- How would you make the name inmutable?
-/* 3-write a function that logs the 5 cities that occur the most in the array below in order from the most number of ocurrences 
+/* 1- Write a function that logs the 5 cities that occur the most in the array below in order from the most number of ocurrences 
 to least. */
-const p ={
-    name: "Julieta",
-    hello: ()=>console.log(`Hello ${p.name}`)
-}
-p.hello()
-Object.freeze(p)
-p.name ="Greta"
-p.hello()
+
 
 function findMostCommonCities(cityList) {
     // Create an object to count the ocurrences of each city
@@ -59,4 +50,5 @@ function findMostCommonCities(cityList) {
   ];
   
   findMostCommonCities(citiesList);
-  
+  module.exports = { findMostCommonCities };
+
